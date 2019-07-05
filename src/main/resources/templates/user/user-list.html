@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Users</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+<link href="/static/css/style.css" rel="stylesheet"></link>
+<link href="/static/css/main.css" rel="stylesheet"></link>
+
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="/static/assets/scripts/main.js"></script>
+</head>
+<body class="container">
+	<div th:switch="${users}">
+		<p class="my-5">
+			<a href="/users/signup" class="btn btn-primary"><i
+				class="fas fa-user-plus ml-2"> Add User</i></a>
+
+			<!-- <button type="button" class="btn mr-2 mb-2 btn-primary"
+				data-toggle="modal" data-target=".bd-example-modal-lg">Add
+				User</button> -->
+		</p>
+		<h2 th:case="null">No User Found!</h2>
+		<div th:case="*">
+			<table class="table table-striped table-responsive-md">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Mobile</th>
+						<th>Email</th>
+						<th>Username</th>
+						<th>Status</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user : ${users}">
+						<td th:text="${user.id}"></td>
+						<td th:text="${user.mobile}"></td>
+						<td th:text="${user.email}"></td>
+						<td th:text="${user.userName}"></td>
+						<td th:text="${user.active}"></td>
+						<!-- <td>Active</td> -->
+						<td><button type="button" aria-haspopup="true"
+								aria-expanded="false" data-toggle="dropdown"
+								class="mb-2 mr-2 dropdown-toggle btn btn-light">Select Option...</button>
+							<div tabindex="-1" role="menu" aria-hidden="true"
+								class="dropdown-menu">
+								<button type="button" tabindex="0" class="dropdown-item">Activate</button>
+								<button type="button" tabindex="0" class="dropdown-item">Deactivate</button>
+								
+							</div></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+
+
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+	aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo
+					odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus,
+					porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Praesent commodo cursus magna, vel scelerisque nisl
+					consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+					faucibus dolor auctor.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
