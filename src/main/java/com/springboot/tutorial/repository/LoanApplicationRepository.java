@@ -13,18 +13,17 @@
 * is obtained from SATIN CREDITCARE NETWORK LIMITED.
 */
 
-package net.javaguides.springboot.tutorial.repository;
+package com.springboot.tutorial.repository;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.springboot.tutorial.entity.LoanApplication;
+import com.springboot.tutorial.entity.StatusType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
-import net.javaguides.springboot.tutorial.entity.LoanApplication;
-import net.javaguides.springboot.tutorial.entity.StatusType;
 
 @Repository
 public interface LoanApplicationRepository extends JpaRepository<LoanApplication, Long> {

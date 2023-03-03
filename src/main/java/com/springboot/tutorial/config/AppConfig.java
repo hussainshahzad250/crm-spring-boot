@@ -1,4 +1,4 @@
-package net.javaguides.springboot.tutorial;
+package com.springboot.tutorial.config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;

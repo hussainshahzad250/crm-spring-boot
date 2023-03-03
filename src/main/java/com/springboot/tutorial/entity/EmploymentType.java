@@ -13,25 +13,28 @@
 * is obtained from SATIN CREDITCARE NETWORK LIMITED.
 */
 
-package net.javaguides.springboot.tutorial.entity;
 
-public enum StatusType {
+package com.springboot.tutorial.entity;
+
+public enum EmploymentType {
 	
-	ACCEPT,
-	REJECT,
-	SUBMIT,
-	DISBURSED,
-	REJECTED,
-	OFFER_REJECTED,
-	TRANSFER_PAYMENT_PENDING,
-	TRANSFER_PAYMENT_SUCCESSFULLY,
-	INITIATED,
-	IN_PROGRESS,
-	COMPLETED,
-	FAILED,
-	READY,
-	PENDING,
-	CLOSED,
-	EXPIRED,
-	APPROVED;
+	SALARIED("Salaried"),
+	SELF_EMPLOYED("Self Employed"),
+	OTHERS("Others"),
+	STUDENT("Student");
+	
+	private String description;
+	
+	EmploymentType(String description){
+		this.description=description;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	 void setDescription(String description) {
+		this.description = description;
+	}
+	
 }

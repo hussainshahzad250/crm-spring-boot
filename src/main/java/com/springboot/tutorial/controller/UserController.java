@@ -1,7 +1,8 @@
-package net.javaguides.springboot.tutorial.controller;
+package com.springboot.tutorial.controller;
 
 import javax.validation.Valid;
 
+import com.springboot.tutorial.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,8 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import net.javaguides.springboot.tutorial.entity.User;
-import net.javaguides.springboot.tutorial.repository.UserRepository;
+import com.springboot.tutorial.repository.UserRepository;
 
 @Controller
 @RequestMapping("/users/")

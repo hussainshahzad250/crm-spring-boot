@@ -13,7 +13,7 @@
 * is obtained from SATIN CREDITCARE NETWORK LIMITED.
 */
 
-package net.javaguides.springboot.tutorial.entity;
+package com.springboot.tutorial.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

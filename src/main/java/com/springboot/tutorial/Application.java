@@ -1,4 +1,4 @@
-package net.javaguides.springboot.tutorial;
+package com.springboot.tutorial;
 
 import org.springframework.boot.SpringApplication;
 

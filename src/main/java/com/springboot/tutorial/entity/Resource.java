@@ -12,7 +12,7 @@
 * Dissemination of this information or reproduction of this material is strictly forbidden unless prior written permission
 * is obtained from SATIN CREDITCARE NETWORK LIMITED.
 */
-package net.javaguides.springboot.tutorial.entity;
+package com.springboot.tutorial.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
